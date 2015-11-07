@@ -18,7 +18,7 @@ public class Explosion {
         this.y = y;
         this.height = h;
         animation.setFrames(res);
-        animation.setDelay(10);
+        animation.setDelay(1);
 
 
 

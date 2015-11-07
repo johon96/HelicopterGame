@@ -460,19 +460,10 @@ public class GamePanel extends SurfaceView implements SurfaceHolder.Callback
         Helicopter[1] = Bitmap.createScaledBitmap(BitmapFactory.decodeResource(getResources(), R.drawable.helicopter2), 65, 25, true);
         Helicopter[2] = Bitmap.createScaledBitmap(BitmapFactory.decodeResource(getResources(), R.drawable.helicopter3), 65, 25, true);
         bg = new Background(Bitmap.createScaledBitmap(BitmapFactory.decodeResource(getResources(), R.drawable.grassbg1),856,480,true));
-        Missile[0] = Bitmap.createScaledBitmap(BitmapFactory.decodeResource(getResources(),R.drawable.missile0),45,15,true);
-        Missile[1] = Bitmap.createScaledBitmap(BitmapFactory.decodeResource(getResources(),R.drawable.missile1),45,15,true);
-        Missile[2] = Bitmap.createScaledBitmap(BitmapFactory.decodeResource(getResources(),R.drawable.missile2),45,15,true);
-        Missile[3] = Bitmap.createScaledBitmap(BitmapFactory.decodeResource(getResources(),R.drawable.missile3),45,15,true);
-        Missile[4] = Bitmap.createScaledBitmap(BitmapFactory.decodeResource(getResources(),R.drawable.missile4),45,15,true);
-        Missile[5] = Bitmap.createScaledBitmap(BitmapFactory.decodeResource(getResources(),R.drawable.missile5),45,15,true);
-        Missile[6] = Bitmap.createScaledBitmap(BitmapFactory.decodeResource(getResources(),R.drawable.missile6),45,15,true);
-        Missile[7] = Bitmap.createScaledBitmap(BitmapFactory.decodeResource(getResources(),R.drawable.missile7),45,15,true);
-        Missile[8] = Bitmap.createScaledBitmap(BitmapFactory.decodeResource(getResources(),R.drawable.missile8),45,15,true);
-        Missile[9] = Bitmap.createScaledBitmap(BitmapFactory.decodeResource(getResources(),R.drawable.missile9),45,15,true);
-        Missile[10] = Bitmap.createScaledBitmap(BitmapFactory.decodeResource(getResources(),R.drawable.missile10),45,15,true);
-        Missile[11] = Bitmap.createScaledBitmap(BitmapFactory.decodeResource(getResources(),R.drawable.missile11),45,15,true);
-        Missile[12] = Bitmap.createScaledBitmap(BitmapFactory.decodeResource(getResources(),R.drawable.missile12),45,15,true);
+        for(int i=0;i<Missile.length;i++){
+            int id = getDrawableId(getContext(),"missile"+i);
+            Missile[i] = Bitmap.createScaledBitmap(BitmapFactory.decodeResource(getContext().getResources(),id),45,15,true);
+        }
         for(int i=0;i<explosionImage.length;i++){
             int k =i+1;
             int id = getDrawableId(getContext(),"explosion"+k);
